@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>RenderSimply Architecture Walkthrough</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.138.0/build/three.module.js"
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+
+
+    <section class="user-input">
+        <form id="hide/show">
+
+            <div>
+            <input placeholder="ERF Number" class="erfNumber" type="number"></input>
+            </div>
+
+            <div>
+            <input placeholder="Password" class="password" type="password"></input>
+            </div>
+
+            <div>
+                <label class="inputfile" >Upload File
+                <input type="file"  id="file-upload-input" name="files[]" class="fileToBeLoaded"/>
+                </label>
+            </div>
+
+            <div>
+                <button type="submit" class="custom-btn btn-5" ><span>Submit</span></button>
+            </div>
+        
+
+
+        </form>
+
+        <div class="btn-show-hide">
+            <button class="custom-btn btn-5" onclick="hideShow()">Hide/Show</button>
+            <script>
+                function hideShow() {
+                var x = document.getElementById("hide/show");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+                }
+            </script>
+        </div>
+
+
+
+    </section>
+
+
+
+    <section class="model_space">
+        <div id="info"></div>
+        <div id="container"></div>
+
+        
+
+    </section>
+
+
+    <footer id="footer">
+        <div class="logoDiv">
+            <a href="https://www.instagram.com/rendersimply/"><img class="logoImg" src="Images\logoRS.png" alt="RenderSimply"></img></a>
+        </div>
+        <div class="logoSetting">
+            <button  class="custom-btn btn-5 settings"  ><a href="./index.html" style="text-decoration: none; color: black; "><span>HOME</span></a></button>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="module" src="./index.js"></script>
+
+</body>
+</html>
